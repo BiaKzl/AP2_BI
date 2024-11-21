@@ -1,0 +1,22 @@
+select * from fato_venda;
+select * from dim_cliente;
+select * from dim_filial;
+select * from dim_pagamento;
+select * from dim_veiculo;
+select * from dim_vendedor;
+select * from dim_data;
+
+INSERT INTO dim_cliente (sk_cliente, nome_completo, genero, data_nascimento, estado_civil, bairro, cidade, estado, nk_cliente_id, etl_dt_inicio, etl_dt_fim, etl_versao) 
+VALUES (0, 'N/A', 'N', '1900-01-01', 'N', 'N/A', 'N/A', 'N/A', 0, '1900-01-01', '2199-12-31', 0);
+
+INSERT INTO dim_filial (sk_filial, nk_filial_id, bairro, cidade, estado, etl_dt_inicio, etl_dt_fim, etl_versao) 
+VALUES (0, 0, 'N/A', 'N/A', 'N/A', '1900-01-01', '2199-12-31', 0);
+
+INSERT INTO dim_pagamento (sk_pagamento, nk_pagamento_id, metodo_pagamento, tipo_pagamento, valor_pago, status, data_pagamento, etl_dt_inicio, etl_dt_fim, etl_versao)
+VALUES (0, 0, 'N/A', 'N/A', 0, 'N/A', '1900-01-01', '1900-01-01', '2199-12-31', 0);
+
+INSERT INTO dim_veiculo (sk_veiculo, nk_veiculo_id, montadora, modelo, ano_fabricacao, tipo, cor, tipo_cambio, tipo_combustivel, potencia_motor, status, etl_dt_inicio, etl_dt_fim, etl_versao)
+VALUES (0, 0, 'N/A', 'N/A', '1900-01-01', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', '1900-01-01', '2199-12-31', 0);
+
+INSERT INTO dim_vendedor (sk_vendedor, nk_vendedor_id, sk_filial, nome_completo, data_nascimento, genero, estado_civil, etl_dt_inicio, etl_dt_fim, etl_versao)
+VALUES (0, 0, 0, 'N/A', '1900-01-01', 'N', 'N', '1900-01-01', '2199-12-31', 0);
